@@ -1,0 +1,41 @@
+<!--
+    JavaScript refer HTML elements by using DOM hierarchy.
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM refer elements</title>
+
+    <script type="text/javaScript">
+        function bodyLoad() {
+            window.document.images[0].src="/images/food.jpg";
+            window.document.forms[0].elements[2].value = "Login";
+            window.document.forms[1].elements[1].value = "Register";
+        }
+    </script>
+</head>
+<body onload="bodyLoad()">
+    <div>
+        <img width="100" height="100" border="1">
+    </div>
+    <div>
+        <form>
+            <h3>User Login</h3>
+            <input type="text" placeholder="User name">
+            <input type="password" placeholder="Password">
+            <input type="button">
+        </form>
+    </div>
+    <div>
+        <form>
+            <h3>Register User</h3>
+            <label>Your E-mail</label>
+            <input type="email">
+            <input type="button">
+        </form>
+    </div>
+</body>
+</html>

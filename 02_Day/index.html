@@ -1,0 +1,174 @@
+<!--
+    JavaScript Drawbacks & Issues:
+-----------------------------------------------
+
+- It is not a strongly typed language.
+
+        x = 10;        x is number type
+        x = "John";    x is transformed into string
+
+- It is not strictly typed implicitly. It is about the programming standards and rules.
+
+- It is not an OOP language. It supports only few features of OOP.
+
+- Extensibility Issues.
+
+- Code Level security Issues.
+
+- It is not secured and can be disabled by browser.
+
+FAQ: How to check the status of JavaScript in browser?
+Ans: By using HTML <noscript> element.
+
+    Syntax:
+        <body>
+        <noscript>
+                please enable javascript on your browser
+        </noscript>
+        </body>
+
+What is solution? Is there any alternative for JavaScript?
+- TypeScript
+-  But typescript have to trans compile its code into JavaScript.
+
+Integrate JavaScript into HTML page
+                      -------------------------------------------------
+JavaScript can be integrated into HTML page by using following techniques
+1. Inline
+2. Embedded
+3. External File
+
+Inline JavaScript
+- In this method JavaScript functions are written directly in HTML element.
+- You can't reuse the code.
+- However it is faster.
+
+Syntax:
+ <button onclick="window.print()"> Print </button>
+
+ Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline</title>
+    <style media="print">
+        button {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Click Print button to print your Ticket</h1>
+    <button onclick="window.print()">Print</button>
+</body>
+</html>
+
+2. Embedded JavaScript
+- In this technique JavaScript functions are defined in a <script> element.
+- So that you can re-use the functions from any location in page.
+- You can embed in <head> or <body> sections.
+- JavaScript MIME type is "text/javascript"  or  "language=javascript".
+
+Syntax:
+  <head>
+    <script type="text/javascript">
+         ..... your functions.......
+    </script>
+ </head>
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline</title>
+    <style media="print">
+        button {
+            display: none;
+        }
+    </style>
+    <script type="text/javascript">
+        function PrintPage(){
+            window.print();
+        }
+    </script>
+</head>
+<body>
+    <h1>Click Print button to print your Ticket</h1>
+    <button onclick="PrintPage()">Print</button>
+</body>
+</html>
+
+3. JavaScript from External File
+- In this technique JavaScript functions can be defined in a separate script file that have the extension ".js".
+- You can link the script file to any webpage by using <script> element.
+
+Syntax:
+     print.js
+     
+     function  PrintPage(){
+        window.print();
+     }
+
+    <head>
+     <script type="text/javascript"  src="../src/scripts/print.js"> </script>
+       </head>
+
+- Using an external file will increase the number of requests to page and also the page load time.
+
+Ex:
+1. Add a new folder  into project "src"  
+        src\scripts
+
+2. Add a new file into scripts
+         print.js
+    function PrintPage()
+    {
+     window.print();
+    }
+
+3. Link to HTML page
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline</title>
+    <style media="print">
+        button {
+            display: none;
+        }
+    </style>
+    <script type="text/javascript" src="../src/scripts/print.js">
+       
+    </script>
+</head>
+<body>
+    <h1>Click Print button to print your Ticket</h1>
+    <button onclick="PrintPage()">Print</button>
+</body>
+</html>
+
+FAQ: How to turn on JavaScript strict mode?
+Ans:  By using "use strict";  
+
+Syntax:
+    <script type="text/javascript">
+         "use strict";
+           .....your functions........
+    </script>
+
+
+FAQ: How to write JavaScript for legacy browsers?
+Ans: JavaScript functions are enclosed in HTML comments and defined in script.
+
+Syntax:
+function PrintPage(){
+    window.print();
+}
+-->
+
