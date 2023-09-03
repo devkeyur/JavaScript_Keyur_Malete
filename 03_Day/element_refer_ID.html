@@ -1,0 +1,52 @@
+<!--
+    JavaScript can refer elements by using ID
+    JavaScript provides a method
+        "document.getElementById()"
+
+Issues:
+    - CSS also uses ID as selector.
+    - In CSS ID can be common for multiple elements
+    - Every element can't have multiple ID's.
+
+Syntax:
+      <img  id="pic">
+
+       document.getElementById("pic").src = "path";
+
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function bodyLoad(){
+            document.getElementById("pic").src = "/images/food.jpg";
+            document.getElementById("login").value = "Login";
+            document.getElementById("register").value = "Register";
+        }
+    </script>
+</head>
+<body onload="bodyLoad()">
+    <div>
+        <img name="pic" id="pic" width="100" height="100" border="1">
+    </div>
+    <div>
+        <form name="frmLogin">
+            <h3>User Login</h3>
+            <input type="text" name="txtUser" placeholder="user name">
+            <input type="password" name="txtUser" placeholder="Password">
+            <input type="button" name="btnLogin" id="login">
+        </form>
+    </div>
+    <div>
+        <form name="frmRegister">
+            <h3>User Register</h3>
+            <input type="password" name="txtUser" placeholder="Password">
+            <input type="button" name="btnLogin" id="register">
+        </form>
+    </div>
+</body>
+</html>

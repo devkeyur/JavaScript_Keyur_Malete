@@ -1,0 +1,76 @@
+JavaScript Output Techniques
+1. alert()
+
+=> confirm()
+- It is similar to alert but allows to cancel.
+- It is a boolean method that returns true or false.
+
+    true        : click OK
+    false        : click Cancel
+
+Syntax:
+    confirm("message");   =>  true / false
+
+=> document.write()
+    - It is used to display and render output on new screen.
+    - It supports complex data to render.
+    - You render simple text or markup.
+
+    Syntax:
+     document.write("message | markup");
+
+=> innerText
+     - It is used to display output in containers that can display text.
+       <div> <span> <dd> <dt> <h2> <p> <blockquote> <td> <li> etc..
+     - It is RC data type. It will not allow formats for text.
+
+     Syntax:
+         elementReference.innerText = "Some message";
+
+=> innerHTML
+     - It is similar to innerText but allows formats.
+     - You can render a message or markup.
+     -- It renders the markup inside existing element.
+
+     Syntax:
+         elementReference.innerHTML = "message | markup";
+
+=> outerHTML
+- It is similar to innerHTML but will replace the existing element with target element.
+
+Syntax:
+    currentElement.outerHTML = "<new element>";
+
+=> console methods
+- Console is a CLI [Command Line Interface] tool used by developer to test code.
+- It is present in every browser "Developer Tools"  [right click => inspect]
+- The console methods are used to display output in developer tools
+
+        console.log()
+        console.warn()
+        console.error()
+        console.debug()
+        console.info()  etc...
+- All console methods are RC data type.
+- You can use "\n" for line break.
+
+
+----------------- JavaScript Input Techniques -----------------
+- Input is the process of scanning the value that user inputs into application.
+- In JavaScript you can configure input for HTML page using 3 techniques
+
+    a) Query String
+    b) Prompt()
+    c) Form Input Elements
+
+    prompt()
+    - It is an input box that pops-up in browser window, from where user can input a value.
+    - prompt() will return following
+    
+            null                    :  on cancel
+            " "  [empty string]        :  on ok without value
+                string                :  on ok with value
+    
+    Syntax:
+       prompt("Your Message", "default_value_optional");
+
