@@ -1,0 +1,154 @@
+<!--
+    FAQ: Can we define a global variable by declaring or initializing within function?
+Ans: Yes. By declaring variable with "window" object. It is available only when JavaScript is used to HTML.
+
+Syntax:
+        window.variableName = value;
+
+Ex:
+<script>
+    "use strict";
+    function f1()
+    {
+     window.x = 30;
+      document.write("x in function-1 :" + x + "<br>");
+    }
+    function f2()
+    {
+        document.write("x in function-2 :" + x);
+    }
+    f1();
+    f2();
+</script>
+
+Variable Naming:
+-----------------------
+- Name can't start with number.
+- Name can be alpha numeric with "_" as special char.
+- It can start with alphabet or _ .
+- "_" is not recommended in production.
+- "_" specifies that it requires further implementation.
+
+        var 2023 = "Available";        // invalid
+        var _2023;                // valid
+        var Y2023;                // valid
+        var Y 2023;                // invalid
+        var Y.2023;                // invalid
+        var Y_2023;                // valid
+
+- Name can't be more that 255 chars long.
+- Name can't be a keyword of JavaScript.
+
+        var for;        // invalid
+        var yeild;        // invalid
+        var class;        // invalid
+        var string;    // invalid
+        var object;    // invalid
+
+- Name must speak what it is.
+
+        var employeeDetails;
+        var _productName;
+
+FAQ's:
+1. What is the result of
+        var x, y, z = 10;
+A:
+        x = undefined
+        y = undefined
+        z = 10
+
+2. How to initialize all variables with single value?
+A.
+    var x = y = z = 10;
+
+3. How to initialize all variable with different values?
+A.
+    var x=10, y=20, z=30;
+
+        ES6+ version allows destructuring of values.
+
+    var [x, y, z] = 10;        // invalid
+    var [x, y, z] = [10,20,30] // valid
+
+    var [x, y, z] = [10];        // x=10, y=undefined, z=undefined
+    var [x, y, z] = [10, , 30]    // x = 10, y=undefined, z=30
+
+
+                          Data Types
+                          ---------------
+- JavaScript is not a strongly typed language.
+- There is no restriction for value type in memory.
+- JavaScript is implicitly typed language.
+
+        var x = 10;        x is number
+        x = "A";            x is string
+        x = true;            x is boolean
+
+- Data type defines the data structure [DS]
+- Data type is about the complete structure of data, which is stored in variable.
+- JavaScript data type can be
+    1. Primitive Type
+    2. Non Primitive Type
+
+Primitive Types
+- They are stored in memory stack. [ LIFO : Last-In-First-Out ]
+- They are immutable.
+- They have a fixed range for values.
+- JavaScript primitive types are
+
+    1. number
+    2. string
+    3. boolean
+    4. null
+    5. undefined
+    6. symbol
+
+                         Number Type
+- JavaScript number type can handle
+        Signed Integer        - 10
+        Unsigned Integer        10
+        Float Point            45.23
+        Double                   345.33, 34.456, 349.34
+        Decimal                4500.22, 45.3456, 4.78863,  [29 decimal places]
+        Exponent                2e3 [ 2 x 10 (3)] = 2000
+        Binary                0b1010
+        Hexad                0xf011
+        Octal                    0o467
+        Bigint                2n
+
+Syntax:
+    var x = 2e3;
+    var x = 0b1010;
+    var x = 0o1010;
+
+- In JavaScript with HTML every input value in considered as a string.
+- You have to convert a string into number by using the parsing methods
+        a) parseInt()
+        b) parseFloat()
+Ex:
+<script>
+    var age = parseInt(prompt("Enter Your Age"));
+    document.write("You will be " + (age+1) + " Next year");
+</script>
+
+EX:
+<script>
+    var rate = parseFloat(prompt("Enter Interest Rate"));
+    document.write("Your interest rate is increase by 1 =" + (rate+1));
+</script>
+
+
+- You can validate a number by using "isNaN()"
+- It returns "true" if input value is not a number.
+
+Ex:
+<script>
+    var rate = parseFloat(prompt("Enter Interest Rate"));
+    if(isNaN(rate)){
+       document.write("Please Enter a Number");
+    } else {
+      document.write("Your interest rate is increase by 1 =" + (rate+1));
+    }
+</script>
+-->
