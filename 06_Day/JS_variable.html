@@ -1,0 +1,200 @@
+<!--
+    JavaScript Language Basics
+                     [with new features from ES6+]
+1. Variables
+2. Data Types
+3. Operators
+4. Statements
+5. Functions
+
+                            Variables
+- Variables are storage locations in memory, where you can store a value and use it as a part of any expression.
+- You can reuse a value by storing it in variable.
+
+Ex: Without a Variable
+
+<script>
+    document.write("Hello ! " + prompt("Enter Name") + "<br>" + "Hey ! " + prompt("Enter Name") + " what are you doing today?");
+</script>
+
+Ex: With Variable
+
+<script>
+    userName = prompt("Enter Name");
+    document.write("Hello ! " + userName + "<br>" + "Hey ! " + userName + " what are you doing today?");
+</script>
+
+            userName => is a variable
+
+Variable Configuration:
+-------------------------------
+- Every variable configuration comprises of 3 phases
+        a) Declaration
+        b) Assignment
+        c) Initialization
+- Declaration is configuring variable reference name with set of rules.
+        var userName;
+        var price;
+
+- Assignment is the process of configuring a value into variable after the declaration.
+
+        userName = "John";
+        price = 3000;
+
+- Initialization is the process of configuring a value into variable at the time of declaration.
+
+        var userName = "John";
+        var price = 3000;
+
+- Declaring variable is not mandatory in JavaScript if it is not in strict mode.
+
+         <script>
+            x = 10;                    // valid
+            document.write("X=" + x);
+        </script>
+
+- Declaring variable is mandatory if JavaScript is in strict mode.
+
+         <script>
+            "use strict";
+            x = 10;                    // invalid
+            document.write("X=" + x);
+        </script>
+
+- Variables are declared in JavaScript by using following keywords
+        var, let, const
+
+What is var ?
+- It configure a function scope variable.
+- You can declare in any block of a function and can access from any another block in the function.
+- It allows declaring, assignment and initialization.
+
+Ex:
+<script>
+    "use strict";
+    function f1()
+    {
+        var x;              // declaring
+        x = 10;             // assignment
+        if(x==10)
+        {
+          var y = 20;       // initialization
+        }
+        document.write("x=" + x + "<br>" + "y=" + y);
+    }
+    f1();
+</script>
+
+- It allows shadowing.
+- Shadowing is the process of declaring or initializing same name identifier within the scope.
+
+        {
+          var y = 10;        // initialization
+          y = 20;            // assignment
+          y = 30;            // assignment
+          var y = 40;        // shadowing
+        }
+
+Ex:
+<script>
+    "use strict";
+    function f1()
+    {
+        var x;              // declaring
+        x = 10;             // assignment
+        if(x==10)
+        {
+          var y = 20;       // initialization
+          y = 30;           // assignment
+          var y = 40;       // shadowing
+        }
+        document.write("x=" + x + "<br>" + "y=" + y);
+    }
+    f1();
+</script>
+
+- It allows hoisting a variable.
+- Hoisting allows to use and declare or initialize a variable.
+- There is no order dependency for declaring and accessing.
+
+        x = 10;
+        document.write("X=" + x);
+        var x;            // hoisting
+
+EX:
+<script>
+    "use strict";
+    function f1()
+    {
+       x = 10;
+       document.write("x=" + x);
+       var x;       // hoisting
+    }
+    f1();
+</script>
+
+What is let ?
+- It configures a block scope variable.
+- It is accessible in the block where it is configured and to its inner blocks.
+- It supports declaring, assignment and initialization.
+
+Ex:
+<script>
+    "use strict";
+    function f1()
+    {
+       let x;
+       x = 10;
+       if(x==10)
+       {
+         let y = 20;
+         document.write("x=" + x  + "<br>" + "y=" + y);
+       }
+    }
+    f1();
+</script>
+
+- It will not support shadowing and hoisting.
+
+What is const?
+- It configures a block scope variable.
+- It will allow only initialization.
+- It will not allow declaring and assignment.
+
+        const price;        // invalid
+        price=20000;        // invalid
+
+        const price=30000;  // valid
+        price=40000;        // invalid
+
+- It will not allow shadowing and hoisting.
+
+What is Global Scope for variable?
+- A global scope allows to access variable from any function.
+- The scope outside function is considered as global.
+
+    <script>
+        // global
+        function f1(){
+          //local
+        }
+        // global
+    </script>
+- You can configure a global scope variable by using "var, let or const".
+
+Ex:
+<script>
+    "use strict";
+    const x=50;
+    function f1()
+    {
+      document.write("x in function-1 :" + x + "<br>");
+    }
+    function f2()
+    {
+        document.write("x in function-2 :" + x);
+    }
+    f1();
+    f2();
+</script>
+ -->
