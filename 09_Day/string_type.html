@@ -1,0 +1,77 @@
+<!-- String Types
+- String is a literal with group of characters enclosed in
+    a) double quotes    "   "
+    b) single quotes    '   '
+    c) back ticks        `   `
+
+- Single and double quotes are used to configure outer and inner strings.
+
+Syntax:
+        var  link = "<a href='home.html'> Home </a>";
+        var  link = '<a  href="home.html"> Home </a>';
+
+- Single and double quote requires lot of concatenation with dynamic values.
+
+Ex:
+<script>
+    var userName = prompt("Enter Name");
+    var age = parseInt(prompt("Enter Age"));
+    var msg1 = "Hello !" + " " + userName + " " + "you will be" + " " + (age+1) + " " + "next year";
+    document.write(msg1);
+</script>
+
+- JavaScript ES5+ version introduced backtick, which configure a string with embedded expression.
+- You can use a data binding expression "${ }" with backticks.
+- Data binding expression is not allowed with single and double quotes.
+
+Syntax:
+            `your string ${ expression } your string`;
+
+Ex:
+<script>
+    var userName = prompt("Enter Name");
+    var age = parseInt(prompt("Enter Age"));
+    var msg1 = "Hello !" + " " + userName + " " + "you will be" + " " + (age+1) + " " + "next year<br>";
+    var msg2 = `Hello ! ${userName} you will be ${(age+1)} next year.`;
+    document.write(msg1);
+    document.write(msg2);
+</script>
+
+- Several string characters are non-printable, to print the non-printable chars you need escape sequence character " \ ".
+
+                \n        line break     console, alert, confirm
+                \t        tab space
+                \v        vertical space
+                \b        backspace
+
+Ex:
+<script>
+    var path = "\"D:\\project\\images\\banner.gif\"";
+    document.write(path);
+</script>
+
+- JavaScript provides various methods for formatting a string dynamically, format includes font, style and effects.
+
+        fontsize()            sets char size from 1 to 7
+        fontcolor()        sets the text color
+        bold()
+        italics()
+        sup()
+        sub()
+        strike()
+        toUpperCase()
+        toLowerCase() etc..
+
+Note: String formatting methods are not suitable for RC data type elements.
+
+        document.querySelector("p").innerHTML = "Hello".bold().italics();
+
+         <b><i>Hello</i></b>
+
+        document.getElementById("textBox").value = "Hello".bold()
+
+Ex:
+<script>
+    var msg = "Welcome to JavaScript";
+    document.write(msg.fontcolor('red').fontsize(6).bold().italics());
+</script> -->
