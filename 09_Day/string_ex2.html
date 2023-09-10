@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function BoldClick() {
+            document.getElementById("msg").innerHTML = "Welcome to JS".bold();
+        }
+        function italicClick() {
+            document.getElementById("msg").innerHTML = "Welcome to JS".italics();
+        }
+
+        function strikeClick() {
+            document.getElementById("msg").innerHTML = "Welcome to JS".strike();
+        }
+
+        function upperCase() {
+            document.getElementById("msg").innerHTML = "Welcome to JS".toUpperCase();
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <button onclick="BoldClick()">Bold</button>
+        <button onclick="italicClick()">Italic</button>
+        <button onclick="strikeClick()">Strike</button>
+        <button onclick="upperCase()">Upper case</button>
+    </div>
+    <p id="msg">Welcome to JS</p>
+</body>
+</html>
