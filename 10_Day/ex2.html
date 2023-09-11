@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function verifyCard() {
+            var card = document.getElementById("txtCard").value;
+            var imgCard = document.getElementById("imgCard");
+            if (card.startsWith("4455")) {
+                imgCard.src = "../images/master_card.png";
+            } else {
+                imgCard.src = "../images/visa.png";
+            }
+        }
+
+        function verifySkype() {
+            var skype = document.getElementById("txtSkype").value;
+            var skypeError = document.getElementById("skypeError");
+            if (skype.endsWith("outlook.com")) {
+                skypeError.innerHTML = "Access".fontcolor('blue');
+            } else {
+                skypeError.innerHTML = "invalid Skype ID".fontcolor('red');
+            }
+        }
+    </script>
+</head>
+<body>
+    <dl>
+        <dt>Card Number</dt>
+        <dd style="align-items: center; display: flex;">
+            <input type="text" id="txtCard" onblur="verifyCard()">
+            <img style="margin-left: 10px;" id="imgCard" width="100" height="50" alt="">
+        </dd>
+        <dt>
+            <dd>Your Skype ID</dd>
+            <dd>
+                <input type="text" onblur="verifySkype()" id="txtSkype">
+                <span id="skypeError"></span>
+            </dd>
+        </dt>
+    </dl>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!-- - JavaScript provides various methods for manipulating string
+
+1.    length            :  It returns the total count of chars in a string.
+2.    charAt()            :  It returns the character at specified index.
+3.     charCodeAt()        :  It returns the character code defined at specified index.
+
+Syntax:
+     var str = "Welcome";
+     str.length;            => 7
+     str.charAt(0);            => W
+     str.charCodeAt(0);        =>  86 [A = 65, Z = 90] -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <dl>
+        <dt>User name</dt>
+        <dd><input type="text" onblur="VerifyName()" id="txtname"></dd>
+        <dd id="nameError"></dd>
+    </dl>
+
+    <script src="/09_Day/script.js"></script>
+</body>
+</html>

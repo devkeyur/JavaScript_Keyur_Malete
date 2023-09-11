@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+    <script>
+        function verifyEmail() {
+            var email = document.getElementById("txtEmail").value;
+            var emailError = document.getElementById("emailError");
+            var atPos = email.indexOf("@");
+            var dotPos = email.lastIndexOf(".");
+            if((atPos < 2) || (dotPos-atPos)<4) {
+                emailError.innerHTML = "invalid Email".fontcolor('red');
+            } else {
+                emailError.innerHTML = "";
+            }
+        }
+    </script>
+</head>
+<body>
+    <dl>
+        <dt>Your Email</dt>
+        <dd><input type="text" id="txtEmail" onblur="verifyEmail()"></dd>
+        <dd id="emailError"></dd>
+    </dl>
+</body>
+</html>

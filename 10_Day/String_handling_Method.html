@@ -1,0 +1,73 @@
+<!-- JavaScript String Handling
+1. length
+2. charAt()
+3. charCodeAt()
+4. indexOf()            : It returns the index number of given character in string.
+                      It returns the first occurrence index number.
+
+Syntax:
+      var str = "Welcome";
+      str.indexOf("e");        // 1
+      str.indexOf("a");        // -1
+
+5. lastIndexOf()        : It returns the last occurrence index number of a character.
+
+      str.lastIndexOf("e");    // 6
+
+6. startsWith()        : It returns boolean true if string starts with specified char(s).
+
+ 7. endsWith()            : It returns true if string ends with specified char(s).
+
+ Syntax:
+    var str = "Welcome";
+    str.startsWith("w");        // false
+    str.endsWith("e");        // true
+
+8. slice()                : It returns the chars between specified index.
+
+ 9. substr()            : It returns the specified number of chars from given index.
+
+ 10. substring()        : It returns the chars between specified index and it is
+                      bi-directional in access.
+
+FAQ: What is difference between slice, substr & substring?
+Ans:
+    slice        : It uses start index and end index.
+              End index value must be greater than start index.
+              You can slice backward.
+
+              Syntax:   str.slice(startIndex, endIndex);
+                     str.slice(startIndex);            // reads upto end
+
+    substr    : It uses start index and count of chars to read from given index.
+
+              Syntax:   str.substr(startIndex, count);
+                     str.substr(startIndex);             // reads upto end
+
+    substring    : It uses start and end index.
+              End index can be backward.
+
+              Syntax:     str.substring(startIndex, endIndex);
+                     str.substring(startIndex);        // reads upto end
+                     str.substring(startIndex, 0);        // read backward
+
+Ex:
+    var viewUrl = "https://www.youtube.com/watch?v=70oRSJ4cBPA&quot;
+    var videoCode= ?
+
+<script>
+    var viewUrl = "https://www.youtube.com/watch?v=70oRSJ4cBPA&quot;;
+    var videoCode = viewUrl.slice(viewUrl.indexOf("=")+1);
+    document.write(`
+         URL : ${viewUrl}  <br>
+         Code: ${videoCode}
+    `);
+</script>
+
+Ex:
+    var  email  =  "john_nit2023@outlook.com";
+
+     var Id  = ?
+         var domain = ?
+-->
+
