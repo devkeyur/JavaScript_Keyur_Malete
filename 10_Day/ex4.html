@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function verifyId() {
+            var userId = document.getElementById("txtID").value;
+            var error = document.getElementById("error");
+            if (userId.trim() == "Keyur_malete") {
+                error.innerHTML = "";
+            } else {
+                error.innerHTML = "invalid UserID".fontcolor('red');
+            }
+        }
+
+        function SplitF() {
+            var str = "Keyur,7359733592,keyurmalete1554@gmail.com";
+            var [name,mobile,emil] = str.split(',');
+            document.getElementById("splitFun").innerHTML = `Orignal is look like => ${str} <br><br>------------------<br><br>after using split method <br> Name : ${name} <br> Mobile: ${mobile} <br> Emil : ${emil}`;
+        }
+
+    </script>
+</head>
+<body>
+    <fieldset>
+        <legend>User ID</legend>
+        <input type="text" id="txtID" onblur="verifyId()">
+        <div id="error"></div>
+    </fieldset>
+
+    <button style="margin-top: 20px;" onclick="SplitF()">Split Ex</button>
+    <p id="splitFun"></p>
+</body>
+</html>

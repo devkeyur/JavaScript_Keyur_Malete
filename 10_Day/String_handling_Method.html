@@ -69,5 +69,35 @@ Ex:
 
      var Id  = ?
          var domain = ?
+
+11. split()            : It splits a string at specified character [delimeter].
+                      It returns an array of strings.
+
+Syntax:
+        var  str = "john,98822294958,john@gmail.com";
+        var [name,mobile,email] = str.split(',');
+
+<script>
+      var  str = "john,98822294958,john@gmail.com";
+      var [name,mobile,email] = str.split(',');
+      document.write(`
+         Name : ${name} <br>
+         Mobile: ${mobile} <br>
+         Email : ${email}
+      `);
+</script>
+
+ex: split
+   
+var  email  =  "john_nit2023@outlook.com";
+ 
+ var [id, domain] = email.split('@');
+
+   12. trim()            :  It removes the leading spaces in a string.
+                       [space before and after string]
+
+Syntax:
+    var str = "   welcome   ";
+    document.write(str.trim());
 -->
 

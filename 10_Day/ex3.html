@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function register() {
+        var email = document.getElementById("txtEmail").value;
+        var atPos = email.indexOf("@");
+        var id = email.substring(0, atPos);
+        var domain = email.substring(atPos + 1);
+        document.getElementById("detail").innerHTML =
+          `Your Email : ${email} <br> Your id : ${id} <br> Registered At : ${domain} `.fontcolor(
+            "green"
+          );
+
+      }
+    </script>
+  </head>
+  <body>
+    <fieldset>
+      <legend>Your Email</legend>
+      <input type="text" id="txtEmail" onfocus="getDetails()" />
+      <button onclick="register()" >Submit</button>
+    </fieldset>
+    <p id="detail"></p>
+    <p id="auto"></p>
+  </body>
+</html>
