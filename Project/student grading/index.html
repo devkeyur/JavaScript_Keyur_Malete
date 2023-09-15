@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Grading system</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script src="/Project/student grading/index.js"></script>
+</head>
+<body>
+    <nav class="container-fluid align-items-center text-center">
+        <div>
+            <h2>Student Grading System</h2>
+        </div>
+    </nav>
+    <!-- Project -->
+    <div class="container-fluid bg-black text-white text-center w-25">
+        <p> Enter Students Marks</p>
+    </div>
+    <div class="justify-content-between w-auto p-2 d-flex bg-danger">
+        <div class="form- m-2">
+            <input type="text" class="form-control" placeholder="Web development" id="web">
+        </div>
+        <div class="form- m-2">
+            <input type="text" class="form-control" placeholder="Android" id="App">
+        </div>
+        <div class="form- m-2">
+        <input type="text" class="form-control" placeholder="PHP" id="php">
+    </div>
+    <div class="form- m-2">
+        <input type="text" class="form-control" placeholder="Python" id="python">
+    </div>
+    <div class="form- m-2">
+        <input type="text" class="form-control" placeholder="JAVA" id="java">
+    </div>
+    <div class="form- m-2">
+        <input type="text" class="form-control" placeholder="c" id="c">
+    </div>
+</div>
+
+<div class="container-fluid mt-2">
+    <input type="button" class="fomrm-button btn btn-primary" value="Show percentage" onclick="calculate()">
+</div>
+
+    <!-- show to result -->
+    <div class="container-fluid form-group showdata mt-4 p-2 text-center">
+        <p id="showdata"></p>
+    </div>
+
+    <!-- script -->
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

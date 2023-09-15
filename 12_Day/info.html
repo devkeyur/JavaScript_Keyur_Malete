@@ -1,0 +1,64 @@
+Null, Undefined, Symbol and Non Primitive Types
+
+Primitive Data types
+- Number
+- String
+- Boolean
+
+                                BigInt
+- It is a new data type for large integer values.
+- Large integers have memory issues.
+- E5+ version introduced a new way of configuring large integers called BigInt.
+- You can configure Large Integers by using "n" as suffix or by using
+    "Number.MAX-SAFE-INTEGER()
+
+<script>
+    var price = 9993838281n;
+    document.write(`Price=${price}`);
+</script>
+
+                            Symbol
+- It configures a hidden key for object.
+- Key is ignored over iterations and other collection operations.
+But it is available to handle individually.
+
+Syntax:
+       var  Id = Symbol();
+
+       var  product = {
+        [Id] : 1,
+        Name: "TV",
+        Price : 30400.22
+        }
+
+       for(var key in product)
+       {
+         document.write(`${key} <br>`);
+       }
+       document.write(`Product Id=${product[Id]}`);
+
+
+                             Undefined
+       - It configures that a variable reference is defined but value is not defined.
+       - Undefined is the type configured for variable at compile time.
+       
+       Syntax:
+               var x;
+               document.write("x=" + x);        x = undefined
+       
+       - You can verify value by using the keyword "undefined".
+               Bad:
+               if(x==undefined)
+               {
+                  // please provide a value;
+               }
+               else
+               {
+                 // print the value;
+               }
+                 Good:
+               if(x) {
+                   // defined;
+               } else {
+                   // undefined;
+               }
