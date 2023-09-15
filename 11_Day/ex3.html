@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="/node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/node_modules/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <script>
+      function sortToggle() {
+        var button = document.querySelector("button");
+        button.className = (button.className == "bi bi-sort-alpha-down") ? "bi bi-sort-alpha-up" : "bi bi-sort-alpha-down";
+    }
+
+    // function sortToggle() {
+    //     var button = document.querySelector("button");
+
+    //     if (button.className == "bi bi-sort-alpha-up") {
+    //         button.className = "bi bi-sort-alpha-down";
+    //     } else {
+    //         button.className = "bi bi-sort-alpha-up";
+    //     }
+    // }
+    </script>
+  </head>
+  <body>
+    <button onclick="sortToggle()" class="bi bi-sort-alpha-up"></button>
+  </body>
+</html>

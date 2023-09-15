@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+      function SetStock() {
+        var stockCheckbox = document.getElementById("stock");
+        var label = document.getElementById("lblstock");
+
+        if (stockCheckbox.checked == true) {
+          label.innerHTML = "Available";
+        } else {
+          label.innerHTML = "Out of Stock";
+        }
+      }
+
+      function ToggleClick() {
+        var stockCheckbox = document.getElementById("stock");
+        stockCheckbox.checked = (stockCheckbox.checked==true)?false:true;
+        var label = document.getElementById("lblstock");
+        label.innerHTML =
+          (stockCheckbox.checked==true)?"Available":"Out of Stock";
+      }
+    </script>
+  </head>
+  <body>
+    <div
+      style="
+        align-items: center;
+        display: flex;
+        width: 30%;
+        padding: 5px;
+        justify-content: space-between;
+      "
+    >
+      <button onclick="ToggleClick()">Toggle</button>
+</div>
+<input type="checkbox" onchange="SetStock()" id="stock" />
+<label id="lblstock"> Out of Stock</label>
+  </body>
+</html>

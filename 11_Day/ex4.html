@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="/node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/node_modules/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <script>
+      function Toggle() {
+        var button = document.querySelector("button");
+        var pic = document.getElementById("pic");
+        pic.style.margin = "10px 0px 0px 10px";
+
+        button.className= (button.className == "bi bi-eye-fill")?"bi bi-eye-slash": "bi bi-eye-fill";
+        pic.style.display = (pic.style.display == "none")? " block" : " none";
+        button.innerHTML = (button.innerHTML == " Hide")?" Show" : " Hide";
+
+
+        // if (button.className == "bi bi-eye-fill") {
+        //   button.className = "bi bi-eye-slash";
+        //   pic.style.display = "block";
+        //   button.innerHTML = "Hide";
+        // } else {
+        //   button.className = "bi bi-eye-fill";
+        //   pic.style.display = "none";
+        //   button.innerHTML = "Show";
+        // }
+      }
+
+      function age() {
+        var userAge = document.getElementById("uage").value;
+        var msg = document.querySelector("p");
+
+        msg.innerHTML = userAge >=18 ? "You are and adult".fontcolor('green') : "not adult".fontcolor('red');
+
+        // if(userAge>=18 && userAge<=120){
+        //     msg.innerHTML = "You are an adult".fontcolor('green');
+        // }else{
+        //     msg.innerHTML = "You are not an adult".fontcolor('red');
+        // }
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="Toggle()" class="bi bi-eye-fill"> Show</button>
+    <div>
+      <img
+        src="/images/gadar 2.jpeg"
+        style="display: none; width: 200; height: 200"
+        id="pic"
+        alt=""
+      />
+    </div>
+
+    <div>
+        <input type="text" onkeyup="age()" id="uage">
+        <p></p>
+        <!-- <button onclick="age()">submit</button> -->
+    </div>
+  </body>
+</html>

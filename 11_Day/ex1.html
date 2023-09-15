@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input,meter{
+            width: 200px;
+        }meter{
+            height: 20px;
+        }
+    </style>
+
+    <script>
+        function changeMeter(min,max,value) {
+            var meter = document.querySelector('meter');
+            meter.min = min;
+            meter.max = max;
+            meter.value = value;
+        }
+
+        function verifyPassword() {
+            var password = document.getElementById('txtPwd').value;
+            var regExp = /(?=.*[A-Z])\w{4,15}@/;
+            var msg = document.getElementById('msg');
+            if (password.match(regExp)) {
+                msg.innerHTML = "strong password".fontcolor('green');
+            } else {
+                if (password.length<5) {
+                    msg.innerHTML = "Poor password - min 5 chars required".fontcolor('red');
+                } else {
+                    msg.innerHTML = "Weak password - Atleast one uppercase letter required and @".fontcolor('gold');
+                    changeMeter(1,100,60);
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <fieldset>
+        <legend>verify Password</legend>
+        <input type="password" onkeyup="verifyPassword()" id="txtPwd">
+        <div>
+            <div id="msg"></div>
+        </div>
+    </fieldset>
+</body>
+</html>
