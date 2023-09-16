@@ -14,8 +14,10 @@ const calculate = () => {
 
     let totalgrades = parseFloat(web) + parseFloat(App) + parseFloat(php) + parseFloat(python) + parseFloat(java) + parseFloat(c);
 
+    
     // check the condition for the providing the grade to students
     let percentage = (totalgrades / 600) * 100;
+    let finalgrade = percentage.toFixed(2);
     if (percentage <= 100 && percentage >= 80) {
         grades = "A";
     } else if (percentage <= 79 && percentage >= 60) {
@@ -29,16 +31,18 @@ const calculate = () => {
     // Checking the values are empty or not
 
     if (web == "" || App == "" || php == "" || python == "" || java == "" || c == "" || studentName == "") {
-        document.getElementById("showdata").innerHTML = "Please enter all the fields"
+        document.getElementById("showdata").innerHTML = "Please enter all the fields".fontcolor('red');
     } else {
         //  checking the condition for the fail and pass
 
-        if (percentage >= 39.5) {
-            document.getElementById("showdata").innerHTML = `Dear ${studentName} Here is your Mark Sheet <br> Out of 600 your total is ${totalgrades} and percentage is ${percentage}%. <br> Your grade is ${grades}. <br> <b> You are Pass. <b>`;
+        if (finalgrade >= 39.5) {
+            document.getElementById("showdata").innerHTML = `Dear ${studentName} Here is your Mark Sheet <br> Out of 600 your total is ${totalgrades} and percentage is ${finalgrade}%. <br> Your grade is ${grades}. <br> <b> You are Pass. <b>`;
             document.getElementById("showdata").style.background = "black";
             document.getElementById("showdata").style.color = "white";
         } else {
-            document.getElementById("showdata").innerHTML = `Out of 600 your total is ${totalgrades} and percentage is ${percentage}%. <br> Your grade is ${grades}. <br> You are Fail.`;
+            document.getElementById("showdata").innerHTML = `Dear ${studentName} Here is your Mark Sheet <br> Out of 600 your total is ${totalgrades} and percentage is ${finalgrade}%. <br> Your grade is ${grades}. <br> You are Fail.`;
+            document.getElementById("showdata").style.background = "black";
+            document.getElementById("showdata").style.color = "white";
         }
     }
 };
