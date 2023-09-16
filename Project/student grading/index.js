@@ -7,6 +7,7 @@ const calculate = () => {
     let python = document.getElementById("python").value;
     let java = document.getElementById("java").value;
     let c = document.getElementById("c").value;
+    let studentName = document.getElementById("sName").value;
     let grades = "";
 
     // input is string so typecasting is necessary
@@ -27,17 +28,17 @@ const calculate = () => {
 
     // Checking the values are empty or not
 
-    if (web == "" || App == "" || php == "" || python == "" || java == "" || c == "") {
+    if (web == "" || App == "" || php == "" || python == "" || java == "" || c == "" || studentName == "") {
         document.getElementById("showdata").innerHTML = "Please enter all the fields"
     } else {
         //  checking the condition for the fail and pass
 
         if (percentage >= 39.5) {
-            document.getElementById("showdata").innerHTML = `Out of 400 your total is ${totalgrades} and percentage is ${percentage}%. <br> Your grade is ${grades}. <br> <b> You are Pass. <b>`;
+            document.getElementById("showdata").innerHTML = `Dear ${studentName} Here is your Mark Sheet <br> Out of 600 your total is ${totalgrades} and percentage is ${percentage}%. <br> Your grade is ${grades}. <br> <b> You are Pass. <b>`;
             document.getElementById("showdata").style.background = "black";
             document.getElementById("showdata").style.color = "white";
         } else {
-            document.getElementById("showdata").innerHTML = `Out of 400 your total is ${totalgrades} and percentage is ${percentage}%. <br> Your grade is ${grades}. <br> You are Fail.`;
+            document.getElementById("showdata").innerHTML = `Out of 600 your total is ${totalgrades} and percentage is ${percentage}%. <br> Your grade is ${grades}. <br> You are Fail.`;
         }
     }
 };
