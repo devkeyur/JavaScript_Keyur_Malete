@@ -1,22 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-
-</head>
-<body>
+  </head>
+  <body>
     <form>
-        <h2>Edit Your self</h2>
-        <dl>
-            <dd><input type="hidden" name="UserId" value="Keyur_malete"></dd>
-            <dt>user name</dt>
-            <dd><input type="text" name="UserName" value="Keyur"></dd>
-            <dt>Age</dt>
-            <dd><input type="number" name="Age" value="22"></dd>
-        </dl>
-        <button>Save</button>
+      <h2>Edit Your self</h2>
+      <dl>
+        <dd><input type="hidden" name="UserId" value="Keyur_malete" /></dd>
+        <dt>user name</dt>
+        <dd><input type="text" name="UserName" value="Keyur" /></dd>
+        <dt>Age</dt>
+        <dd><input type="number" name="Age" value="22" /></dd>
+      </dl>
+      <button>Save</button>
     </form>
-</body>
+
+    <!-- here is the example of symbol -->
+    <script>
+        var id = Symbol();
+
+        var product={
+            [id]:1,
+            Name: "TV",
+            Price : "23000.23"
+        }
+        for(var key in product){
+            document.write(`${key} <br>`)
+        }
+        document.write(`Product id = ${product[id]}`)
+    </script>
+  </body>
 </html>
