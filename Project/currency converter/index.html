@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="./style.css">
+    <link
+      rel="stylesheet"
+      href="/node_modules/bootstrap-icons/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>Currency Converter</header>
+      <form action="#">
+        <div class="amount">
+          <p>Enter Amount</p>
+          <input type="text" value="0" />
+        </div>
+        <div class="drop-list">
+          <div class="from">
+            <p>From</p>
+            <div class="select-box">
+                <img src="https://flagsapi.com/IN/flat/64.png" alt="flag" />
+                <select>
+                    
+                </select>
+            </div>
+          </div>
+          <div><i class="bi bi-arrow-left-right"></i></div>
+          <div class="to">
+            <p>To</p>
+            <div class="select-box">
+                <img src="https://flagsapi.com/US/flat/64.png" alt="flag" />
+                <select>
+                    
+                </select>
+            </div>
+          </div>
+        </div>
+        <div class="exchange-rate">Exchange rate is.....</div>
+        <button>Get Exchange Rate</button>
+      </form>
+    </div>
+
+    <script src="./js/country.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>

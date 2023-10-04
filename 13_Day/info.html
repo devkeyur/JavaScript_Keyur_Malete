@@ -1,0 +1,46 @@
+<!-- Array Configuration -->
+
+Configuring Array:
+- It comprises of 2 phases
+    a) Declaring Array
+    b) Intializing or Assigning memory for Array
+
+- Declaring Array is same as other variable types, you can use var, let & const.
+
+    var products;
+    let  categories;
+    const users;
+
+- Array memory is initialized or assigned by using 2 techniques
+    a)  [ ]        Array meta character
+    b)  Array()    Array constructor
+
+    var products = [ ];            or        var products;
+                                    products = [ ];
+
+   
+    var products = new Array()    or        var products;
+                                    products = new Array();
+
+Note: "new" is dynamic memory allocation operator.
+
+FAQ: What is difference between  "[ ]" & Array()?
+Ans:
+     [ ]     configures static memory, the memory allocated will continue across multiple
+        requests.
+
+    Array()  configures dynamic memory, the memory allocated will be discreet. It is
+              newly allocated every time when requested.
+
+Storing Data into Array:
+- You can initialize values into array meta character or Array() constructor.
+
+    var values = [10, "A", true];
+    var values = new Array(10, "A", true);
+
+- You can assign value into array memory by the reference of property.
+- Property is a string type that maps the Index number.
+
+     var values  = [ ];
+     values[0] = 10;            =>  0 & 1 are properties [string type]
+     values["1"] = "A";
