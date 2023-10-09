@@ -18,10 +18,24 @@ var categories = ["All", "Electronics", "Footwear"];
 
 // second way to create
 
-function bodyLoad(){
+// function bodyLoad(){
+//     categories.map(function (category) {
+//         var li = document.createElement("li");
+//         li.innerHTML = `<input type="checkbox"><label>${category}</label>`;
+//         document.querySelector("ul").appendChild(li);
+//     })
+// }
+
+// Third way to create
+
+function bodyLoad() {
     categories.map(function (category) {
         var li = document.createElement("li");
-        li.innerHTML = `<input type="checkbox"><label>${category}</label>`;
+        li.innerHTML = `<input type = "Checkbox"><label>${category}</label>`;
         document.querySelector("ul").appendChild(li);
-    })
+
+        var olLI = document.createElement("li");
+        olLI.innerHTML = `<a href="#">${category}</a>`;
+        document.querySelector("ol").appendChild(olLI);
+    });
 }

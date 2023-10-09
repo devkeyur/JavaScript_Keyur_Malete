@@ -1,0 +1,77 @@
+<!-- Adding Element into Array
+
+push()            It adds new element(s) as last element i.e towards end of list.
+unshift()            It adds new element(s) as first element.
+splice()            It adds new element(s) at specific position.
+
+Syntax:
+    collection.push("item1", "item2", ...);
+    collection.unshift("item1", "item2",...);
+
+    collection.splice(indexNumber, deleteCount, "new Items...");
+    collection.splice(2,0, "item1", "item2", ...);
+
+Ex:
+        categories.splice(1,0,"Kids Fashion","Women Fashion");
+
+                    Removing Element from Array
+                    ----------------------------------------
+
+pop()            It removes and returns the last element.
+shift()            It removes and returns the first element.
+splice()            It removes and returns specific elements.
+
+Syntax:q
+    collection.pop()
+    collection.shift()
+    collection.splice(index, deleteCount)
+
+FAQ: How to remove all items from array? How to empty array?
+Ans :
+       collection = [ ];
+       collection.length = 0;
+
+                     Sorting Array Elements
+                     -------------------------------
+
+sort()        : It sorts in ascending order
+reverse()        : It sorts in reverse order [from bottom to top]
+
+Syntax:
+    collection.sort()
+    collection.reverse() -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body class="container-fluid" onload="bodyLoad()">
+    <div class="mt-4 p-2 w-25">
+        <div class="input-group">
+            <input type="text" id="txtCity" placeholder="Add new City" class="form-control">
+            <button class="btn btn-primary" onclick="AddClick()">Add</button>
+        </div>
+        <div class="mt-3 p-2">
+            <button onclick="SortAsc()" class="btn btn-primary bi bi-sort-alpha-down"></button>
+            <button onclick="SortDes()" class="btn btn-primary bi bi-sort-alpha-up"></button>
+            <select id="lsCities" class="form-select mt-2" size="5">
+
+            </select>
+            <label class="form-label fw-bold" id="lblCount"></label>
+        </div>
+        <div class="mt-3 p-2">
+            <button class="btn btn-danger" onclick="RemoveClick()"><span class="bi bi-trash-fill">Remove</span></button>
+            <button class="btn btn-danger mt-2" onclick="ClearClick()"><span class="bi bi-trash">Clear All</span></button>
+        </div>
+    </div>
+
+    <!-- js -->
+    <script src="./ex2.js"></script>
+</body>
+</html>
