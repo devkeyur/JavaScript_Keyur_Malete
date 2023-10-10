@@ -1,0 +1,18 @@
+{
+  "Title": "redmi note 8 (with dragon chip)",
+  "Price": 12300,
+  "Rating": {
+    "Rate": 4.6,
+    "count": 9952,
+    "Reviews": 420
+  },
+  "Features": [
+    "8GB RAM | 64GB ROM | Expandable Upto 2TB",
+    "13.2 cm (6.2 inch) HD Display",
+    "108MP + 2MP | 8MP Front Camera",
+    "5000 mAh Battery",
+    "T612 Processor"
+  ],
+  "Photo": "../images/redmi.png",
+  "msg" : "finally Completed"
+}

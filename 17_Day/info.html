@@ -1,0 +1,150 @@
+<!-- JSON - JavaScript Object Notation
+Fetch - Promise
+Fetch Data from JSON File
+
+Object Manipulations
+-----------------------------
+1. How to delete any Key from object?
+A. By using delete operator.
+
+    product = {
+        Name: "TV",
+        Price: 45000.33
+    }
+    delete  product.Price;
+   
+
+2. How to check any property or key existance?
+A. By using "in" operator. It returns true if key exists.
+
+Syntax:
+        "Key"  in  objectName;        => true | false
+
+Ex:
+<script>
+    var product = {
+        Name: "TV",
+        Price: 45000.33
+    }
+    if("Price" in product){
+        document.write(`Name=${product.Name}<br>Price=${product.Price}`);
+    } else {
+        document.write(`Name=${product.Name}`);
+    }
+   
+</script>
+
+3. How to read all keys from object?
+A. By using "for..in" statement  or  "Object.Keys()"
+
+Syntax:
+    for(var key in objectName)
+    {
+      document.write(key + "<br>");
+    }
+
+Ex:
+<script>
+    fetch("../data/product.json")
+    .then(function(response){
+        return response.json();
+    })
+    .then(function(product){
+        for(var property in product){
+            document.write(`${property}<br>`);
+        }
+    })
+   
+</script>
+
+Syntax:
+       Object.keys(objectName).map(function(key){
+        console.log(key);
+       })
+
+Ex:
+<script>
+    fetch("../data/product.json")
+    .then(function(response){
+        return response.json();
+    })
+    .then(function(product){
+        Object.keys(product).map(function(key){
+            document.write(`${key}<br>`);
+        })
+    })
+   
+</script>
+
+
+4. How to know the data type of Key and Value in object?
+A. By using for..in  or Object.keys(). To know data type you have to use "typeof" operator.
+
+Ex:
+<script>
+    fetch("../data/product.json")
+    .then(function(response){
+        return response.json();
+    })
+    .then(function(product){
+        Object.keys(product).map(function(key){
+            document.write(`${key}:${typeof product[key]}<br>`);
+        })
+    })
+   
+</script>
+
+
+5. How to know the total count of keys in object?
+A.
+    Object.keys(product).length
+
+Ex:
+<script>
+    fetch("../data/product.json")
+    .then(function(response){
+        return response.json();
+    })
+    .then(function(product){
+        Object.keys(product).map(function(key){
+            document.write(`${key}:${typeof product[key]}<br>`);
+        })
+        document.write(`Total Number of Keys : ${Object.keys(product).length} `);
+    })
+   
+</script>
+
+                              Array of Objects
+- Array can configure multiple objects.
+- Usually data is returned from API as Object or Array.
+- Complex data is configured in the form of "Array of Objects".
+
+Syntax:
+     [
+       {                [0] => Object
+       },
+      {                [1] => Object
+      }
+    ]
+
+Ex:
+1. Add a new file into data folder
+        "products.json"
+
+[
+    {
+        "Name": "Samsung TV",
+        "Price": 45000.44,
+        "Stock": true
+    },
+    {
+        "Name":"Nike Casuals",
+        "Price": 2000.44,
+        "Stock": false
+    },
+    {
+        "Name":"Watch",
+        "Price": 5000.33,
+        "Stock":true
+    }
+] -->

@@ -15,4 +15,4 @@ document.write(` ------- Product Details ------ <br><br>
     Stock = ${tv.Stock} <br>
     Cities = ${tv.cities.join(" / ")} <br>
     Rating = ${tv.Rating.Rate} [${tv.Rating.count}] <br>
-`)
+`);

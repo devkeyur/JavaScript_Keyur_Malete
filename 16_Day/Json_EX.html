@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON example</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body class="container-fluid" onload="bodyLoad()">
+    <div class="row mt-4">
+        <div class="col-2">
+            <img id="prodImg" alt="img" width="250">
+        </div>
+        <div class="col-7 ps-4">
+            <h2 id="title"></h2>
+            <div id="rating"></div>
+            <ul id="feature" class="mt-4">
+
+            </ul>
+        </div>
+        <div class="col-2">
+            <h2 id="price" class="text-white bg-black rounded-3 p-1" style="width: fit-content;"></h2>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script src="./json.js"></script>
+</body>
+</html>
