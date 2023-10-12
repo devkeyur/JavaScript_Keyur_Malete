@@ -25,16 +25,19 @@ function FetchClick() {
                 var tdName = document.createElement("td");
                 var tdPrice = document.createElement("td");
                 var tdRating = document.createElement("td");
+                var tdImage = document.createElement("td");
 
                 tdSr.innerHTML = product.id;
                 tdName.innerHTML = product.title;
                 tdPrice.innerHTML = product.price;
                 tdRating.innerHTML = product.rating.rate;
+                tdImage.innerHTML = `<image src=${product.image} width="100" height="100">`
 
                 tr.appendChild(tdSr);
                 tr.appendChild(tdName);
                 tr.appendChild(tdPrice);
                 tr.appendChild(tdRating);
+                tr.appendChild(tdImage);
 
                 document.querySelector("tbody").appendChild(tr);
             })
