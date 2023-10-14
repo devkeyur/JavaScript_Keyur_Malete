@@ -1,0 +1,100 @@
+<!-- Map Type
+- It is a key and value collection similar to object.
+- The keys are of "any" type.
+- The value are also "any" type.
+- It provides lot of implicit methods used for manipulations.
+- Hence it is faster than object. But it is schema less. [structure less]
+
+Methods:
+set()            Add new key and value
+get()            Read a value using key.
+has()        To verify the availablity of key.
+delete()        To remove element using key
+clear()        To remove all keys and values
+keys()        It returns all keys
+values()        It returns all values
+entries()        It returns both keys and values
+
+Syntax:
+    var  topics  = new Map();
+    topics.set("key", value);
+    topics.get(key);
+    topics.delete(key);
+    topics.clear()
+    topics.size
+    topics.values() etc... 
+
+Date Type
+- JavaScript provides a Date() constructor to store and manipulate date type values.
+
+Syntax:
+    var mfd = new Date();        => loads current date and time into memory
+
+    var mfd = new Date("yy-mm-dd hrs:min:sec.millsec");
+
+- JavaScript provides various methods to present date and time value. All date and time methods return a number.
+
+    getHours()        returns hour number 0 to 23
+    getMinutes()        returns minutes number 0 to 59
+    getSeconds()        returns seconds number 0 to 59
+    getMilliSeconds()    returns milliseconds 0 to 99
+    getDay()            returns weekday number 0=Sunday
+    getDate()            returns current date number. [1 to 31]
+    getMonth()        returns month number [0 = January ]
+    getFullYear()        returns full year [2023]
+
+    setHours()
+    setMinutes()
+    setSeconds()
+    setMilliSeconds()
+    setDate()
+    setMonth()
+    setFullYear()
+
+    toLocaleDateString()
+    toLocaleTimeString()
+
+    - JavaScript provides various Timer Events
+    a) setTimeout()
+    b) clearTimeout()
+    c) setInterval()
+    d) clearInterval()
+
+- setInterval() can load a function into memory and execute the function repeatedly at regular time intervals.
+
+Syntax:
+    setInterval(function(){}, interval);
+
+Task: Display Salutation on page in any container using date functions.
+- store date and time in variable
+- create a variable for hours number
+- write the condition
+
+        hrs >= 0  && hrs <=12        Good Morning
+        hrs >12 && hrs<=16        Good Afternoon
+        hrs > 16 && hrs <=23        Good Evening
+
+if()...else if()...else if()...else
+
+- clearInterval()  that removes timer function from memory.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="bodyLoad()">
+    
+    <!-- Ex of timer event -->
+    <p align="center"></p>
+    <div align="center">
+        <button onclick="StartClick()">Start</button>
+        <button onclick="StopClick()">Stop</button>
+    </div>
+
+    <script src="./ex2.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!-- Debounce
+
+- Bouncing is the mechanism of executing specified task immediately when requested.
+- All tasks are performed without any delay.
+- Hence user can't see the tasks functioning.
+- You can delay the execution of task by using Debouncing technique.
+- It is implemented with "setTimeout()" function.
+
+Syntax:
+    setTimeout(function(){}, interval);
+
+- You can cancel from memory using clearTimeout().
+
+Syntax:
+    clearTimeout(functionReference); -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="bodyLoad()">
+    <button onclick="CancelClick()">Cancel 2nd Message</button>
+    <p align="Center"></p>
+
+    <!-- JS -->
+    <script src="./index.js"></script>
+</body>
+</html>
